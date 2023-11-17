@@ -5,11 +5,10 @@ export const theme = extendTheme({
     primary: {
       50: "#80A7AC",
     },
-
     danger: {
       50: "#AC8085",
       100: "#AC8099",
-      150: "#F89F9F",
+      200: "#F89F9F",
     },
 
     tertiary: {
