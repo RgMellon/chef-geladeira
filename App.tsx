@@ -1,6 +1,5 @@
 import { NativeBaseProvider, Box } from "native-base";
 import React from "react";
-import { Welcome } from "./src/screens/Welcome";
 
 import {
   useFonts,
@@ -13,6 +12,9 @@ import {
 import { ActivityIndicator, StatusBar } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { theme } from "./src/theme";
+
+import { Routes } from "./src/routes";
+import { WelcomeProvider } from "./src/contexts/WelcomeContext";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -30,12 +32,15 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
         translucent
+        barStyle="dark-content"
+        backgroundColor="#dcd7d751"
       />
+
       <NativeBaseProvider theme={theme}>
-        <Welcome />
+        <WelcomeProvider>
+          <Routes />
+        </WelcomeProvider>
       </NativeBaseProvider>
     </GestureHandlerRootView>
   );

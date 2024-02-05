@@ -19,7 +19,7 @@ export function CarrouselItem({ item, onClickButton }: CarrouselItem) {
       alignItems={"center"}
       width={SRC_WIDTH}
     >
-      <Box marginTop="180px" padding={"20px"}>
+      <Box marginTop="60px" padding={"20px"}>
         <Text fontFamily={"heading"} fontSize={"36px"}>
           {item.title}
         </Text>

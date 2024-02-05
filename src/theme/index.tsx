@@ -4,6 +4,7 @@ export const theme = extendTheme({
   colors: {
     primary: {
       50: "#80A7AC",
+      100: "rgba(128, 167, 172, 0.3)",
     },
     danger: {
       50: "#AC8085",
@@ -12,6 +13,7 @@ export const theme = extendTheme({
     },
 
     tertiary: {
+      50: "rgba(153, 172, 128, 0.4)",
       100: "#99AC80",
     },
 
