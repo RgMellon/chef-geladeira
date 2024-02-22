@@ -1,13 +1,12 @@
 import { FlatList, Image } from "native-base";
 
-import BowlFood from "../assets/icons/bowl-food.svg";
 import ChefImage from "../assets/icons/chef.png";
-import Freeze from "../assets/icons/freeze.svg";
-import Food from "../assets/icons/food.svg";
+import ChefHowWork from "../assets/icons/howWorks.png";
+import ChefFork from "../assets/icons/chefFork.png";
 
 import Animated from "react-native-reanimated";
 import React, { useRef, useState } from "react";
-import { Dimensions, FlatListProps } from "react-native";
+import { Dimensions } from "react-native";
 import { CarrouselItem } from "../components/CarrouselItem";
 import { useWelcome } from "../hooks/useWelcome";
 
@@ -51,17 +50,35 @@ export function Welcome() {
     },
     {
       title: "Fácil",
-      subtitle: "Cadastre os itens que tem em sua geladeira",
-      buttonTitle: "Certo, mais alguma coisa?",
+      subtitle:
+        "Adicione os itens que voce tem em sua geladeira, e eu te ajudo",
+      buttonTitle: "Certo, bora começar!!",
 
-      img: <Freeze width={"300"} height={"300"} />,
+      img: (
+        <Image
+          resizeMode="cover"
+          source={ChefHowWork}
+          width={"400px"}
+          h={"400px"}
+          alt="image of freezer"
+        />
+      ),
       bgColor: "#F89F9F",
     },
     {
       title: "Quase lá",
-      subtitle: "Agora é só escolher o tipo de refeição e... prontinho",
-      buttonTitle: "Entendi, Iniciar",
-      img: <Food width={"300"} height={"300"} />,
+      subtitle:
+        "Eu também te ajudo a dar uma base em calorias que o prato tem, sou completo heim =)",
+      buttonTitle: "Agora vamos iniciar",
+      img: (
+        <Image
+          resizeMode="cover"
+          source={ChefFork}
+          width={"400px"}
+          h={"400px"}
+          alt="image of freezer"
+        />
+      ),
       bgColor: "#99AC80",
     },
   ] as StepProps[];

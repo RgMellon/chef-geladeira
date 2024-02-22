@@ -15,6 +15,7 @@ import { theme } from "./src/theme";
 
 import { Routes } from "./src/routes";
 import { WelcomeProvider } from "./src/contexts/WelcomeContext";
+import { RecipeProvider } from "./src/contexts/RecipeContext";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -39,7 +40,9 @@ export default function App() {
 
       <NativeBaseProvider theme={theme}>
         <WelcomeProvider>
-          <Routes />
+          <RecipeProvider>
+            <Routes />
+          </RecipeProvider>
         </WelcomeProvider>
       </NativeBaseProvider>
     </GestureHandlerRootView>
